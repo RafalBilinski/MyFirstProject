@@ -18,6 +18,7 @@
     var(--background-color1)
   );
   color: var(--font-color1);
+  z-index: 100;
 }
 .navbar-btn{
   border-radius: 7px;

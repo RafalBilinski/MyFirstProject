@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import DrumPads from "./components/DrumPads/DrumPads.jsx";
 import BarChart from "./components/BarChart/BarChart.jsx";
 import Home from "./components/Home/Home.jsx";
+import Resume from "./components/Resume/Resume.jsx";
 import "./main.css";
 
 const navbarItems = [
@@ -11,7 +12,7 @@ const navbarItems = [
   { id: "drum-machine", name: "Drum Machine", component: "DrumPads" },
   { id: "bar-chart", name: "Bar chart", component: "BarChart" },
   { id: "about", name: "About", component: null },
-  { id: "contact", name: "Contact", component: null },
+  { id: "contact", name: "Contact", component: "Resume" },
 ];
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
       case "DrumPads":
         return <DrumPads />;
       case "BarChart":
-        return <BarChart title="US GDP over years"/>;
+        return <BarChart title="US GDP vs years"/>;
+      case "Resume":
+        return <Resume />; 
       default:
         return <Home />; // Domyślny komponent
     }

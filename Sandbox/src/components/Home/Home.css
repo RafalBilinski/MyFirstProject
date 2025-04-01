@@ -1,5 +1,5 @@
 
-section{
+#welcome-section{
   margin: 10px 20px 0;
   text-align: center;
   justify-content: center;
@@ -15,14 +15,15 @@ section{
   flex-direction: column;
   text-shadow: 0 0 4px black;
   font-size: 1.5rem;
-  width: min-content;
+  
 }
-h3{ 
+#description{ 
   max-width: 400px; 
   text-wrap: wrap;
   margin: auto;
 }
-h1, p{
+
+#name, #motto{
   width: fit-content;
   margin: auto;
   padding: 15px;
