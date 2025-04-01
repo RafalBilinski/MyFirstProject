@@ -1,0 +1,58 @@
+.buttonContainer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
+}
+
+.drum-pad {
+  padding: 20px 20px;
+  font-size: 2rem;
+  border-radius: 7px;
+  border: 1px solid var(--font-color1);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 1px 1px 2px 1px black;
+}
+
+.drum-pad:hover {
+  color: var(--font-color2);  
+}
+
+#display{
+  padding: 10px;
+  max-width: 260px;
+  height: 55px;
+  margin: auto;
+}
+
+h1{
+  margin: 0;
+  padding: 10px;
+}
+@media only screen and (max-width: 600px){
+  .drum-pad {
+    font-size: 1.5rem;
+    padding: 20px 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+  #display{  
+    font-size: 1rem;
+  }
+
+  #clock{
+    font-size: 1rem;
+  }
+  #drum-machine{
+    min-width: 300px;
+  }
+  .buttonContainer {
+    gap: 5px;
+    width: min-content;
+  }
+  #title{
+    font-size: 2rem;
+  }
+}

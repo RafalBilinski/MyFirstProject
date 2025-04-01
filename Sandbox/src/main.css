@@ -1,0 +1,62 @@
+:root {
+  --back-color: #2e363c;
+  --font-color1: white;
+  --font-color2: #fd8608;
+  --background-color1: #35c8b6;
+  --background-color2: #2aa39e;
+  --background-color3: #30636c;
+}
+
+
+body {
+  background-color: var(--back-color);
+  margin: 0;
+  height: 95vh;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.container {
+  margin: 5px;
+  background: grey;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    -135deg,
+    var(--background-color1),
+    var(--background-color2) 30%,
+    var(--background-color3)
+  );
+  color: var(--font-color1);
+  width: max-content; 
+  height: max-content;
+  
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  text-shadow: 0 0 4px black;
+  margin: 10px 20px 0;
+  width: min-content;
+}
+
+@media only screen and (max-width: 600px){
+  #root{
+    width: 100%; 
+    min-width: 410px;
+  }
+  .container {
+    width: min-content; 
+    height: min-content;
+  }
+}
