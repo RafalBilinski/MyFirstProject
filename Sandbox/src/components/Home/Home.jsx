@@ -1,4 +1,5 @@
 import "./Home.css";
+import legoBrick from "../../assets/lego-brick-icon-16.webp";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       </div>
       <img
         className="welcome-img"
-        src="https://imgs.search.brave.com/b1d47yLxjQqCCgpYMRge3KchRTUNc5Y8QQ7wwS2rulw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/LWxpYnJhcnkuY29t/L2ltYWdlcy9sZWdv/LWJyaWNrLWljb24v/bGVnby1icmljay1p/Y29uLTE2LmpwZw"
+        src={legoBrick}
         alt="lego brick icon"
       />
     </div>

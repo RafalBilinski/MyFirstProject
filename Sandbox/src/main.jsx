@@ -12,7 +12,7 @@ const navbarItems = [
   { id: "drum-machine", name: "Drum Machine", component: "DrumPads" },
   { id: "bar-chart", name: "Bar chart", component: "BarChart" },
   { id: "about", name: "About", component: null },
-  { id: "contact", name: "Contact", component: "Resume" },
+  { id: "resume", name: "Resume", component: "Resume" },
 ];
 
 function App() {
