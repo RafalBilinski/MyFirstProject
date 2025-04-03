@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import DrumPads from "./components/DrumPads/DrumPads.jsx";
 import BarChart from "./components/BarChart/BarChart.jsx";
 import Home from "./components/Home/Home.jsx";
-import Resume from "./components/Resume/Resume.jsx";
+import Resume from "./components/Resume/Resume_EN.jsx";
 import "./main.css";
 
 const navbarItems = [

@@ -33,8 +33,23 @@ section{
     margin-right: auto;
   }
   
+  .projects ul{
+    margin-bottom: 0;
+    padding-left: 10px;
+  }
+
+  .projects ul li{ 
+    padding-bottom: 2px;
+  }
+
+  .projects-item:before {
+    content: '\2022';
+    margin-right: 8px;
+    color: #82042c;
+    font-size: 18px; 
+  }
+
   .bio,
-  .projects,
   .jobs,
   .education {
     margin-bottom: 20px;
@@ -57,30 +72,13 @@ section{
     line-height: 1.714;
     color: #111111;
   }
+
   .bio-about {
     padding: 10px;
   }
 
-  .projects-title {
-    margin-bottom: 14px;
-    color: var(--font-color1);
-    font-size: 22px;
-    line-height: 24px;
-    text-align:center;
-    font-family: 'Cinzel', serif;
-  }
-  
-  .projects-link {
-    opacity: 0.8;
-    color: #2a2a2a;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 24px;
-  }
-  
-  .projects-link:hover {
-    color: var(--background-color3);
-  }
+
+
 
   .bio-title {
     font-size: 45px;
@@ -249,5 +247,19 @@ section{
   }
   
   #rafal-photo:hover { 
-    animation: tada 2s;
+    animation: tada 1s;
+  }
+
+  #certificate-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left: -20px;
+    align-items: center;
+    margin-top: 7px ;
+
+  }
+
+  #certificate-grid p{
+    text-align: end;
+    padding:0 20px;
   }

@@ -1,6 +1,9 @@
 import "./Resume.css";
+import "animate.css";
 import React from "react";
 import photo from "../../assets/photo.jpg";
+import JScert from "../../assets/JScert.png";
+import Frontcert from "../../assets/Frontcert.png";
 
 const Resume = () => {
   return (
@@ -45,7 +48,7 @@ const Resume = () => {
             <div className="boxL"><h2 className="skills-title">Languages</h2>
               </div>
             <ul className="skills-list">
-              <li className="skills-item">English C1</li>
+              <li className="skills-item">English B2+</li>
               <li className="skills-item">HTML + RWD, CSS/SAAS, JavaScript</li>
               <li className="skills-item">Python basics, C++ basics</li>
             </ul>
@@ -55,7 +58,7 @@ const Resume = () => {
             <div className="boxL"><h2 className="skills-title">Tools</h2>
               </div>
             <ul className="skills-list">
-              <li className="skills-item">Jira, MS Word, MS Excel</li>
+              <li className="skills-item">Jira, MS Office</li>
               <li className="skills-item">Chat GPT, MS CoPilot</li>
               <li className="skills-item">GitHub</li>
               <li className="skills-item">Visual Studio Code, React framework</li>
@@ -91,19 +94,19 @@ const Resume = () => {
             <div className="boxR"><h1 className="bio-title">Rafal Bilinski</h1></div>
 
             <p className="bio-about">
-              I have <b > experience in creating the application </b > for service technicians for handling applications 
-                <b> and in team work management. </b>
-              I can <b> resolve conflicts in the team </b> and present the results of his work. 
-              I negotiate with corporate clients with ease.
+              I have been passionate about computers and controllers since I remember.
+              I have <b> experience in creating an application </b> for service technicians 
+              for handling commissions.<b> I use MS CoPilot and Chat GPT but I keep a critical approach 
+              to obtained results. </b><br/>
 
-                Effectively <b > I use MS CoPilot and Chat GPT, but I keep a critical approach 
-                to results obtained. </b>
-                My strength is <b> ability to solve problems creatively </b> and organized 
-                keeping records.
+              My strength is <b> ability to solve problems creatively </b> and keeping records 
+              of my actions in organized way. I can <b> manage a team </b> and present the results of its work, 
+              resolving conflicts whenever they appear. I am <b> open to new challenges</b>. 
+              I can negotiate with corporate clients with ease.<br/>
 
-                Always <b> I am happy to learn new skills </b>, even in my free time.
-                <b> My professional dream is to create the application </b> enabling dog owners to create 
-                your "walking flock" and socializing in the meantime.
+              My current carrier goal is to gain experience in the field of <b> data analysis, </b> <b> machine learning </b> 
+              and <b>frontend</b> to develop AI-related tools which will improve the energy efficiency index and 
+              processes optimisation in the industry.
             </p>
           </section>
 
@@ -112,21 +115,54 @@ const Resume = () => {
             <h2 className="projects-title">Projects and Certificates</h2>
             </div>
             <ul>
-              <li>
-                <span className="accent"><b>ISTQB Advanced Level - Test Manager Certificate</b></span>
+              <li className="projects-item">
+                <span className="accent"><b>Self-made heat pump with full inverter control (C++)</b></span>
               </li>
-              <li>
-                <span className="accent"><b>ISTQB Foundation Level Certificate</b></span>
+              <li className="projects-item">
+                <span className="accent"><b>Application  for service technicians 
+                for handling commitions (UI + Business Logic)</b></span>
               </li>
-              <li>
-                Playwright (TypeScript) course
+
+              <li id="certificate-grid">
+                <p><span className="accent">
+                  JavaScript
+                </span>
+                </p>
+                <a href="https://www.freecodecamp.org/certification/Bilinski_Rafal/javascript-algorithms-and-data-structures-v8"
+                title="Go to https://www.freecodecamp.org and see more"
+                >
+                  <img
+                    src={JScert}
+                    alt="JS Cert QR Code"
+                    width="80"
+                    className="photo"
+                    id="js-cert"
+                  />
+                </a>
+                <p><span className="accent">
+                  Frontend
+                </span>
+                </p>
+                <a href="https://www.freecodecamp.org/certification/Bilinski_Rafal/front-end-development-libraries"
+                title="Go to https://www.freecodecamp.org and see more"
+                >
+                  <img
+                      src={Frontcert}
+                      alt="Frontend Cert QR Code"
+                      width="80"
+                      className="photo"
+                      id="Frontend-cert"
+                    />
+                </a>
+                <p><span className="accent">
+                   Azure AZ900
+                </span>
+                </p>
+                <p><span className="accent">
+                   In progress
+                </span>
+                </p>
               </li>
-              <li>
-                Performance Testing (Jmeter) course
-              </li> 
-              <li>
-                Teaching qualifications (nominated teacher) and tutor certificate
-              </li>   
             </ul>
           </section>
         
@@ -134,36 +170,36 @@ const Resume = () => {
             <div className="boxR"><h2 className="education-title">Work Experience</h2></div>
 
             <h3 className="jobs-occupation">
-              Automatic / analyst / technical advisor - <span className="accent">Automatyka chłodnicza ZRO-BILI Rafał Biliński</span>
+              Automation engineer / analyst / technical advisor <br/> <span className="accent">Automatyka chłodnicza ZRO-BILI Rafał Biliński</span>
             </h3>
             <p className="jobs-time">November 2018 - Currently</p>
 
             <ul className="experience">
               <li className="experience-item">
-                Development of control algorithms based on physical phenomena
+                Development of control algorithms and process opimalization
               </li>
               <li className="experience-item">
-                Reporting and handling errors
+                Work on data sets from physical sensors and correction of software layer errors of BMS controllers
               </li>
               <li className="experience-item">
-                Work on data sets from physical sensors and investment of software layer errors of BMS controllers
-              </li>
-              <li className="experience-item">
-                Conducting technical and business talks with corporate clients, costing
+                Conducting technical and business talks with corporate clients, project costing
               </li>
               <li className="experience-item">
                 Conducting training for technical and office employees
               </li>
+              <li className="experience-item">
+                Worked for: <em>Carel, Orlen, Jeronimo Martins, Amrest </em>
+              </li>
             </ul>
 
             <h3 className="jobs-occupation">
-              Leading electrician / automatisation engineer  - <span className="accent">Naprawa Urządzeń Chłodniczych Czesław Biliński</span>
+              Main electrician / automation engineer<br/> <span className="accent">Naprawa Urządzeń Chłodniczych Czesław Biliński</span>
             </h3>
             <p className="jobs-time">June 2016 - October 2018</p>
 
             <ul className="experience">
               <li className="experience-item">
-                Implementation of investments from scratch: business analysis, testing, implementation, implementation of corrections and as-built documentation
+                Building projects from scratch: business analysis, setting-up, implementation of corrections and as-built documentation
               </li>
               <li className="experience-item">
                 Digitalization of data circulation and documentation as well as staff training
@@ -179,7 +215,7 @@ const Resume = () => {
               </li>
             </ul>
 
-            <h3 className="jobs-occupation">
+            {/*<h3 className="jobs-occupation">
               Service technician for refrigeration and household appliances - 
               <span className="accent">Naprawa Urządzeń Chłodniczych Czesław Biliński</span>
             </h3>
@@ -192,7 +228,7 @@ const Resume = () => {
               <li className="experience-item">
                 Service of refrigeration equipment on large-scale facilities
               </li>
-            </ul>
+            </ul>*/}
           </section>
           
 
@@ -200,14 +236,14 @@ const Resume = () => {
             <div className="boxR"><h2 className="education-title">Education</h2></div>
 
             <h3 className="education-degree">
-              Master degree - Electrical engineering: Industrial automation<br/>
-              <span className="accent">Wroclaw Uniwersity of Technology (Politechnika Wrocławska)</span>
+              Master's degree - Electrical engineering: Industrial automation<br/>
+              <span className="accent">Wroclaw University of Technology (Politechnika Wrocławska)</span>
             </h3>
             <p className="education-time">October 2014 - June 2016</p>
 
             <h3 className="education-degree">
-              Engineer degree: Electrical engineering<br/>
-              <span className="accent">Wroclaw Uniwersity of Technology (Politechnika Wrocławska)</span>
+              Bachelor of Engineering: Electrical engineering<br/>
+              <span className="accent">Wroclaw University of Technology (Politechnika Wrocławska)</span>
             </h3>
             <p className="education-time">October 2011 - June 2014</p>
           </section>
@@ -219,3 +255,4 @@ const Resume = () => {
 
   ) ;
 }
+export default Resume;
