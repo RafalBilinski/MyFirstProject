@@ -91,7 +91,8 @@ section{
   }
 
   .jobs-title,
-  .education-title {
+  .education-title,
+  .projects-title {
     color: var(--font-color1);
     font-size: 22px;
     line-height: 1.091;
