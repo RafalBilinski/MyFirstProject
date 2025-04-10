@@ -11,7 +11,6 @@ const navbarItems = [
   { id: "home", name: "Home", component: null },
   { id: "drum-machine", name: "Drum Machine", component: "DrumPads" },
   { id: "bar-chart", name: "Bar chart", component: "BarChart" },
-  { id: "about", name: "About", component: null },
   { id: "resume", name: "Resume", component: "Resume" },
 ];
 

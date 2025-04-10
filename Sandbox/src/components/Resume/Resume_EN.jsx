@@ -77,7 +77,7 @@ const Resume = () => {
           </section> 
           
           <section className="widget">
-            <a className="widget-link" href="../../assets/Rafal Bilinski resume.pdf" download="">Download Resume</a>
+            <a className="widget-link" href="../../assets/My Resume - Rafal Bilinski.pdf" download="">Download Resume</a>
           </section>
           
           <section className="rodo">
