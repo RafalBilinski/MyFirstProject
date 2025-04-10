@@ -9,7 +9,7 @@ class Navbar extends React.Component {
       activeDropdown: null
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleSubmenuClick = this.handleSubmenuClick.bind(this);
+    this.handleDropDownClick = this.handleDropDownClick.bind(this);
   }
 
   // Handle regular button clicks
@@ -19,8 +19,8 @@ class Navbar extends React.Component {
     }
   }
 
-  // Handle Projects button click
-  handleSubmenuClick(e, id) {
+  // Handle Dropdown button click
+  handleDropDownClick(e, id) {
     e.preventDefault();
     this.setState(prevState => ({
       activeDropdown: prevState.activeDropdown === id ? null : id
@@ -35,11 +35,11 @@ class Navbar extends React.Component {
           key={item.id} 
           className="navbar-link"
         >
-          <div className="dropdown-container">
+          
             <button 
               className="navbar-btn" 
               id={item.id + "-btn"}
-              onClick={(e) => this.handleSubmenuClick(e, item.id)}
+              onClick={(e) => this.handleDropDownClick(e, item.id)}
             >
               {item.name}
             </button>
@@ -57,7 +57,7 @@ class Navbar extends React.Component {
                 ))}
               </div>
             )}
-          </div>
+          
         </div>
       );
     }
@@ -79,7 +79,7 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         {this.props.navbarItems.map(item => this.renderButton(item))}
-        <Logo className="logo" />
+        <Logo className="logo" id="React-logo" />
       </nav>
     );
   }

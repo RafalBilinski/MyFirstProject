@@ -44,7 +44,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;  
-  text-shadow: 0 0 4px black;
   margin: 10px 20px 0;
   width: min-content;
 }

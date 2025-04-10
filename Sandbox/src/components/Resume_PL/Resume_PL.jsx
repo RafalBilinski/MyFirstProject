@@ -4,6 +4,7 @@ import React from "react";
 import photo from "../../assets/photo.jpg";
 import JScert from "../../assets/JScert.png";
 import Frontcert from "../../assets/Frontcert.png";
+import CV from "../../assets/Moje CV - Rafał Biliński.pdf";
 
 const Resume = () => {
   return (
@@ -69,7 +70,7 @@ const Resume = () => {
           </section> 
           
           <section className="widget">
-            <a className="widget-link" href="../../assets/My Resume - Rafal Bilinski.pdf" download="">Pobierz CV</a>
+            <a className="widget-link" href={CV} download="Rafal Bilinski CV PL.pdf">Pobierz CV</a>
           </section>
           
           <section className="rodo">
@@ -171,7 +172,7 @@ const Resume = () => {
             </ul>
 
             <h3 className="jobs-occupation">
-              Elektryk prowadzący / inżynier automatyk<br/>
+              Główny Elektryk / inżynier automatyk<br/>
               <span className="accent">Naprawa Urządzeń Chłodniczych Czesław Biliński</span>
             </h3>
             <p className="jobs-time">Czerwiec 2016 - Październik 2018</p>

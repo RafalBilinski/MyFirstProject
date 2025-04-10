@@ -4,6 +4,7 @@ import React from "react";
 import photo from "../../assets/photo.jpg";
 import JScert from "../../assets/JScert.png";
 import Frontcert from "../../assets/Frontcert.png";
+import CV from "../../assets/My Resume - Rafał Biliński.pdf";
 
 const Resume = () => {
   return (
@@ -77,15 +78,13 @@ const Resume = () => {
           </section> 
           
           <section className="widget">
-            <a className="widget-link" href="../../assets/My Resume - Rafal Bilinski.pdf" download="">Download Resume</a>
+            <a className="widget-link" href={CV} download="Rafal Bilinski Resume.pdf">Download Resume</a>
           </section>
           
           <section className="rodo">
             <h6>I agree to the processing of personal data provided in this document
               for realising this recruitment processes and for future recruitment processes</h6>
               </section>
-
-
 
 
         </aside>
