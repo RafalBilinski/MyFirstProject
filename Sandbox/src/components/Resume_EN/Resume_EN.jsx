@@ -33,14 +33,20 @@ const Resume = () => {
               <li className="contacts-item">
                 E-mail:  
                 <a href="mailto:rafal.bilinski92@gmail.com" className="contacts-link"
-                  > rafal.bilinski92@gmail.com</a
-                >
+                  > rafal.bilinski92@gmail.com
+                  </a>
               </li>
               <li className="contacts-item">
                 LinkedIn:
                 <a href="https://www.linkedin.com/in/rafa%C5%82-bili%C5%84ski/" className="contacts-link"
-                  >in/rafał-biliński/</a
-                >
+                  >in/rafał-biliński/
+                  </a>
+              </li>
+              <li className="contacts-item">
+                GitHub:
+                <a href="https://github.com/RafalBilinski" className="contacts-link"
+                  >github.com/RafalBilinski
+                  </a>
               </li>
             </ul>
           </section>
@@ -51,7 +57,7 @@ const Resume = () => {
             <ul className="skills-list">
               <li className="skills-item">English B2+</li>
               <li className="skills-item">HTML + RWD, CSS/SAAS, JavaScript</li>
-              <li className="skills-item">Python basics, C++ basics</li>
+              <li className="skills-item">Python Core, C++ basics</li>
             </ul>
           </section>
 
