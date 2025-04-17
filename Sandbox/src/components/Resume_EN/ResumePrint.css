@@ -78,6 +78,8 @@ section{
   }
 
 
+
+
   .bio-title {
     font-size: 45px;
     line-height: 1,714;
@@ -89,8 +91,7 @@ section{
   }
 
   .jobs-title,
-  .education-title,
-  .projects-title {
+  .education-title {
     color: var(--font-color1);
     font-size: 22px;
     line-height: 1.091;
@@ -164,7 +165,8 @@ section{
   }
   
   .contacts-title,
-  .skills-title {
+  .skills-title,
+  .projects-title {
     color: var(--font-color1);
     font-family: 'Cinzel', serif;
     font-size: 22px;

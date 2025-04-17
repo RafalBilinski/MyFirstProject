@@ -1,4 +1,4 @@
-import "./Resume.css";
+import "../Resume_EN/Resume.css";
 import "animate.css";
 import React from "react";
 import photo from "../../assets/photo.jpg";

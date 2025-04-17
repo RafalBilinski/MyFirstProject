@@ -1,88 +1,74 @@
-import "./navbar.css";
-import React from "react";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import NavButton from './NavButton';
+import DropdownMenuItems from './DropdownMenuItems';
 import Logo from "../../assets/react.svg?react";
+import "./navbar.css";
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeDropdown: null
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleDropDownClick = this.handleDropDownClick.bind(this);
-  }
+const Navbar = ({ navbarItems, onButtonClick }) => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Handle regular button clicks
-  handleClick(e, component) {
-    if (this.props.onButtonClick) {
-      this.props.onButtonClick(component);
-    }
-  }
-
-  // Handle Dropdown button click
-  handleDropDownClick(e, id) {
+  const handleDropdownClick = (e, id) => {
     e.preventDefault();
-    this.setState(prevState => ({
-      activeDropdown: prevState.activeDropdown === id ? null : id
-    }));
-  }
+    setActiveDropdown(prevId => prevId === id ? null : id);
+  };
 
-  // Render buttons
-  renderButton(item) {
+  const renderNavItem = (item) => {
     if (item.isDropdown) {
       return (
-        <div 
-          key={item.id} 
-          className="navbar-link"
-        >
-          
-            <button 
-              className="navbar-btn" 
-              id={item.id + "-btn"}
-              onClick={(e) => this.handleDropDownClick(e, item.id)}
-            >
-              {item.name}
-            </button>
-            {this.state.activeDropdown === item.id && (
-              <div className="dropdown-content"
-              onMouseLeave={() => this.setState({ activeDropdown: null })}>
-                {item.submenu.map(subItem => (
-                  <button
-                    key={subItem.id}
-                    className="navbar-btn"
-                    onClick={(e) => this.handleClick(e, subItem.component)}
-                  >
-                    {subItem.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          
+        <div key={item.id} className="navbar-link">
+          <NavButton
+            id={item.id}
+            name={item.name}
+            onClick={(e) => handleDropdownClick(e, item.id)}
+          />
+          {activeDropdown === item.id && (
+            <DropdownMenuItems
+              items={item.DropdownMenu}
+              onItemClick={onButtonClick}
+              onMouseLeave={() => setActiveDropdown(null)}
+            />
+          )}
         </div>
       );
     }
 
     return (
-      <div 
-        key={item.id} 
-        className="navbar-link"
-        onClick={(e) => this.handleClick(e, item.component)}
-      >
-        <button className="navbar-btn" id={item.id + "-btn"}>
-          {item.name}
-        </button>
+      <div key={item.id} className="navbar-link">
+        <NavButton
+          id={item.id}
+          name={item.name}
+          onClick={() => onButtonClick(item.component)}
+        />
       </div>
     );
-  }
+  };
 
-  render() {
-    return (
-      <nav className="navbar">
-        {this.props.navbarItems.map(item => this.renderButton(item))}
-        <Logo className="logo" id="React-logo" />
-      </nav>
-    );
-  }
-}
+  return (
+    <nav className="navbar">
+      {navbarItems.map(renderNavItem)}
+      <Logo className="logo" id="React-logo" />
+    </nav>
+  );
+};
+
+Navbar.propTypes = {
+  navbarItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      component: PropTypes.string,
+      isDropdown: PropTypes.bool,
+      DropdownMenu: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          name: PropTypes.string.isRequired,
+          component: PropTypes.string
+        })
+      )
+    })
+  ).isRequired,
+  onButtonClick: PropTypes.func.isRequired
+};
 
 export default Navbar;

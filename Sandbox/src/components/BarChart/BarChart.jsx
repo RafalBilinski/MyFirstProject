@@ -2,13 +2,15 @@ import "./BarChart.css";
 import * as d3 from "d3";
 import React, { useEffect, useRef, useState } from "react";
 
+const title="US GDP over years"
 const dataURL = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json";
-function BarChart({ title }) {  
+
+function BarChart() {  
   const [data, setData] = useState([]);
   const paddingLeft= 40;
   const paddingRest= 20;
-  const width = Math.min(window.innerWidth * 0.8, 600);
-  const height = Math.min(window.innerHeight * 0.7 -80, 400);;
+  const width = Math.min(window.innerWidth * 0.8, 900);
+  const height = Math.min(window.innerHeight * 0.7 -80, 600);;
   
   const fetchData = async () => {
     try {
