@@ -5,6 +5,7 @@ import BarChart from "../BarChart/BarChart.jsx";
 import Home from "../Home/Home.jsx";
 import Resume_EN from "../Resume_EN/Resume_EN.jsx";
 import Resume_PL from "../Resume_PL/Resume_PL.jsx";
+import Calculator from "../Calculator/Calculator.jsx";
 
 // This function takes the current button clicked and returns
 // the corresponding component to render.
@@ -18,6 +19,10 @@ export const renderComponent = (currentButton) => {
       return <Resume_EN />; 
     case "Resume_PL":
       return <Resume_PL />; 
+    case "Home":
+      return <Home />;
+    case "Calculator":
+      return <Calculator />;
     default:
       return <Home />;
   }
@@ -40,7 +45,8 @@ const navbarItems = [
     isDropdown: true,
     DropdownMenu: [
       { id: "drum-machine", name: "Drum Machine", component: "DrumPads" },
-      { id: "bar-chart", name: "Bar Chart", component: "BarChart" }
+      { id: "bar-chart", name: "Bar Chart", component: "BarChart" },
+      { id: "calculator", name: "Calculator", component: "Calculator" }
     ]
   }
 ];
