@@ -1,0 +1,63 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+#calculator{
+    font-family: 'Digital-7 Mono', sans-serif; 
+    text-align: right;
+}
+
+#btn-Grid button, #funcBtns button, .ClearEvalBtn{
+    padding: 10px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 7px;
+    font-size: 2rem;
+    font-family: 'Digital-7 Mono', sans-serif;
+  }
+
+#formula-screen{
+    padding: 2px;
+    font-size: 1.5rem;
+    text-shadow: 0 0 1px black;
+    background-color: var(--background-color2);
+    color: black;
+    border-radius: 4px 4px 0 0;
+}
+  
+  #calc-display{
+    font-size: 3rem;
+    text-shadow: 0 0 2px black;
+    padding: 2px;
+    background-color: var(--background-color2);    
+  }
+  
+  .buttonContainer {
+    gap: 5px;
+    grid-template-columns: repeat(4, 1);
+    grid-template-rows: 2;
+  }
+  
+  #ClearEvalBtns{
+   grid-column: 1 /span 4;
+  }
+  .ClearEvalBtn{
+    width: 50%;
+  }
+  
+  #btn-Grid{
+    grid-column: 1 /span 3;
+  }
+  
+  #number-Btns{
+    display: flex;
+    flex-wrap: wrap-reverse; 
+    width: 150px;
+  }
+  
+  #funcBtns{
+  display: grid;
+  grid-column: 4 / span 1;
+  }
+  
+#zero{
+    width: 100px;
+  }
+  

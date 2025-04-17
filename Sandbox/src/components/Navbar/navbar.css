@@ -1,0 +1,123 @@
+.navbar{
+  padding: 5px;
+  border-radius: 0;
+  position: sticky;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  top: 0px;
+  left: 0px;
+  width: max(calc(100% - 2*5px),400px);
+  height: max(max-content, 45px); 
+  block-size: auto;
+  margin-bottom: 5px;
+  background: linear-gradient(
+    180deg,
+    var(--background-color3),
+    var(--background-color2) 30%,
+    var(--background-color1)
+  );
+  color: var(--font-color1);
+  z-index: 100;
+}
+.navbar-btn{
+  border-radius: 7px;
+  border: 1px solid var(--font-color1);
+  background: linear-gradient(
+    -135deg,
+    var(--background-color1),
+    var(--background-color2) 30%,
+    var(--background-color3)
+  );
+  color: var(--font-color1);
+  height: 100%;
+  min-width: 85px;
+  width: 98%;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 5px var(--background-color3);
+  padding: 5px;
+  box-shadow: 1px 1px 0px 1px black;
+}
+.navbar-btn:hover{
+  color: var(--font-color2);
+}
+.navbar-link{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.buttonContainer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
+}
+
+
+.logo {
+  height: 2rem;
+  will-change: filter;
+  transition: filter 300ms;
+  grid-column: 7;
+  justify-self: end;
+  overflow: hidden;
+  margin: auto;
+}
+
+.dropdown-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  background: var(--background-color3);
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: calc(100% - 10px);
+  min-width: min-content;
+  z-index: 102;
+}
+
+.dropdown-content .navbar-btn {
+  width: 100%;
+  min-width: 150px;
+  position: relative;
+  z-index: 103;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 10s linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .logo:hover {
+    animation: logo-spin infinite 1s linear;
+  }
+}
+@media only screen and (max-width: 600px){
+  .navbar-btn{
+    font-size: 1rem;
+    min-width: 65px;
+    width: 98%;
+  }
+
+}

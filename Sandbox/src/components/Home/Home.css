@@ -1,0 +1,61 @@
+
+#welcome-section{
+  margin: 10px 20px 0;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(
+    -135deg, 
+    var(--background-color1), 
+    var(--background-color2),
+    var(--background-color3));
+  border-radius: 7px;
+  padding: 20px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0 0 4px black;
+  font-size: 1.5rem;
+  
+}
+#description{ 
+  max-width: 400px; 
+  text-wrap: wrap;
+  margin: auto;
+}
+
+#name, #motto{
+  width: fit-content;
+  margin: auto;
+  padding: 15px;
+}
+
+span{
+  color: var(--font-color2);
+}
+.welcome-img{
+  width: 20%;
+  margin: auto;
+  padding: 15px 0 15px 0;
+}
+.wrapper{
+  border: 1px solid var(--font-color1);
+  border-radius: 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+  section, .wrapper{
+    font-size: 1rem;
+    width: fit-content;
+    margin: auto;
+    }
+
+  h3{ 
+    max-width: 300px; 
+  }
+  .welcome-img{
+    width: 15%;
+  
+    padding: 15px 0 15px 0;
+  }
+}
