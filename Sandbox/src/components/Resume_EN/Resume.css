@@ -147,7 +147,7 @@ section{
     line-height: 1.091;
   }
   
-  .skills-item {
+  .skills-item, .contacts-item {
     font-size: 14px;
     line-height: 1.414;
   }
@@ -184,14 +184,15 @@ section{
     font-weight: 400;
     line-height: 22px;
     color: var(--background-color3);
-    margin-left: 30px;
+    margin-left: -8px;
   }
   
   .contacts-link {
     opacity: 0.9;
     color: #5F021F;
     text-decoration: none;
-    margin-left: 20px;;
+    margin-left: 20px;
+    
   }
   
   .contacts-link:hover {
