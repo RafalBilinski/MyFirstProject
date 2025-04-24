@@ -29,8 +29,9 @@
     background-color: var(--background-color2);    
   }
   
-  .buttonContainer {
-    gap: 5px;
+  .calcButtonContainer {
+    display: grid;
+    gap: 2px;
     grid-template-columns: repeat(4, 1);
     grid-template-rows: 2;
   }

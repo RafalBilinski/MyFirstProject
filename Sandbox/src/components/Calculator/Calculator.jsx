@@ -239,7 +239,7 @@ class Calculator extends React.Component {
             <div id="calculator">
                 <div id="formula-screen"> {this.state.formulaDisplay || "0"}</div>
                 <div id="calc-display"> {this.state.display || "0"}</div>
-                <div id="buttons" className="buttonContainer">
+                <div id="buttons" className="calcButtonContainer">
                 <div id="ClearEvalBtns">
                     <button className="ClearEvalBtn" 
                     id="clear" 
