@@ -5,12 +5,12 @@ import navbarItems, { renderComponent } from "./components/Navbar/NavbarItems.js
 import "./main.css";
 
 function App() {
-  const [currentButton, setCurrentButton] = useState(null);
+  const [currentComponent, setCurrentComponent] = useState(null);
 
   return (
     <StrictMode>
-      <Navbar navbarItems={navbarItems} onButtonClick={setCurrentButton} />
-      <div className="content">{renderComponent(currentButton)}</div>
+      <Navbar navbarItems={navbarItems} setCurrentComponent={setCurrentComponent} />
+      <div className="content">{renderComponent(currentComponent)}</div>
     </StrictMode>
   );
 }

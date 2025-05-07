@@ -1,16 +1,64 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import NavButton from './NavButton';
-import DropdownMenuItems from './DropdownMenuItems';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Logo from "../../assets/react.svg?react";
 import "./navbar.css";
 
-const Navbar = ({ navbarItems, onButtonClick }) => {
+// NavButton component
+const NavButton = ({ id, name, onClick, className = "navbar-btn" }) => (
+  <button className={className} id={`${id}-btn`} onClick={onClick}>
+    {name}
+  </button>
+);
+
+NavButton.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
+
+// DropdownMenu component
+const DropdownMenu = ({ items, onItemClick, onMouseLeave }) => (
+  <div className="dropdown-content" onMouseLeave={onMouseLeave}>
+    {items.map((item) => (
+      <NavButton
+        key={item.id}
+        id={item.id}
+        name={item.name}
+        onClick={() => onItemClick(item.component)} //
+      />
+    ))}
+  </div>
+);
+
+DropdownMenu.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      component: PropTypes.string,
+    })
+  ).isRequired,
+  onItemClick: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
+};
+
+// Main Navbar component
+const Navbar = ({ navbarItems, setCurrentComponent }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleDropdownClick = (e, id) => {
     e.preventDefault();
-    setActiveDropdown(prevId => prevId === id ? null : id);
+    setActiveDropdown((prevId) => (prevId === id ? null : id));
+  };
+
+  const hideDropdown = () => {
+    setActiveDropdown(null);
+  };
+
+  const setCurrentComponentAndHide = (component) => {
+    setCurrentComponent(component);
+    hideDropdown();
   };
 
   const renderNavItem = (item) => {
@@ -23,10 +71,10 @@ const Navbar = ({ navbarItems, onButtonClick }) => {
             onClick={(e) => handleDropdownClick(e, item.id)}
           />
           {activeDropdown === item.id && (
-            <DropdownMenuItems
+            <DropdownMenu
               items={item.DropdownMenu}
-              onItemClick={onButtonClick}
-              onMouseLeave={() => setActiveDropdown(null)}
+              onItemClick={setCurrentComponentAndHide}
+              onMouseLeave={hideDropdown}
             />
           )}
         </div>
@@ -38,7 +86,7 @@ const Navbar = ({ navbarItems, onButtonClick }) => {
         <NavButton
           id={item.id}
           name={item.name}
-          onClick={() => onButtonClick(item.component)}
+          onClick={() => setCurrentComponent(item.component)}
         />
       </div>
     );
@@ -63,12 +111,12 @@ Navbar.propTypes = {
         PropTypes.shape({
           id: PropTypes.string.isRequired,
           name: PropTypes.string.isRequired,
-          component: PropTypes.string
+          component: PropTypes.string,
         })
-      )
+      ),
     })
   ).isRequired,
-  onButtonClick: PropTypes.func.isRequired
+  setCurrentComponent: PropTypes.func.isRequired,
 };
 
 export default Navbar;
