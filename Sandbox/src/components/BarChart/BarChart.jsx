@@ -51,7 +51,7 @@ function BarChart() {
   const chartSvg = useRef(null);
   useEffect(() => {
   fetchData();
-  console.log("Barchart mounted");
+  console.log("Fetching data...");
         
    
   if (data && chartSvg.current) {
@@ -73,9 +73,11 @@ function BarChart() {
       .range([height - paddingRest , paddingRest ]);
     
     
+    const xTicks= parseInt((width - paddingLeft - paddingRest) /35); // 30px for each tick
+    console.log("tics:", xTicks, "width:", width);
     svg.append('g')                                                 // x Axis
       .attr( 'transform', 'translate(0,' + (height- paddingRest)  + ')' )
-      .call( d3.axisBottom(xScale) )
+      .call( d3.axisBottom(xScale).ticks(xTicks) )
       .attr( 'id', 'x-axis' );
     
     svg.append('g')                                                 // y Axis
@@ -126,11 +128,11 @@ function BarChart() {
       .on("mouseover", ({ target }) => handlemouseover(target) )
       .on("mouseout", ({ target }) =>handlemouseout(target) );
       
-     
+    const tooltipXposition= width/6; 
     svg.append("text")                                                 // Tooltip
       .attr("id", "tooltip")
       .attr("class", "invisible")
-      .attr("x", "150")
+      .attr("x", tooltipXposition)
       .attr("y", "60")
       .style("height", "10rem")
       .style("width", "max-content")

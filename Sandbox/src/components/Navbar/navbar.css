@@ -6,7 +6,7 @@
   grid-template-columns: repeat(7, 1fr);
   top: 0px;
   left: 0px;
-  width: max(calc(100% - 2*5px),400px);
+  width: calc(100% - 2*5px);
   height: max(max-content, 45px); 
   block-size: auto;
   margin-bottom: 5px;
@@ -117,7 +117,17 @@
   .navbar-btn{
     font-size: 1rem;
     min-width: 65px;
-    width: 98%;
   }
-
+  .navbar{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .logo {
+    height: 2rem;
+    will-change: filter;
+    transition: filter 300ms;
+    grid-column: 4;
+    justify-self: end;
+    overflow: hidden;
+    margin: auto;
+  }
 }

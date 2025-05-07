@@ -1,6 +1,6 @@
 
 #welcome-section{
-  margin: 10px 20px 0;
+  
   text-align: center;
   justify-content: center;
   background: linear-gradient(
@@ -10,7 +10,9 @@
     var(--background-color3));
   border-radius: 7px;
   padding: 20px;
-  min-width: 300px;
+  min-width: 200px;
+  width: 70%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   text-shadow: 0 0 4px black;
