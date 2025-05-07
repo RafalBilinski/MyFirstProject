@@ -31,6 +31,17 @@ function BarChart() {
     }
   };
 
+  if (data.length === 0) { // Check if data is empty
+    console.log("Data is empty, checking localStorage...");
+    if(localStorage.getItem('data') !== null){ // Check if data is in localStorage
+      console.log("Data retrieved from localStorage");
+      setData(JSON.parse(localStorage.getItem('data'))); // Retrieve data from localStorage
+      console.log("Data length fetched from localStorage:", data.length); // Log the retrived data
+    } else { // If data is still empty, fetch it
+      console.log("Fetching data from API...");
+      fetchData();      
+    }
+  }
   const yearsToDisplay = data.map((item)=> {
     let quarter;
     let temp = item[0].substring(5, 7);
@@ -66,15 +77,6 @@ function BarChart() {
     }
   window.addEventListener('resize', handleResize);
 
-  if (data.length === 0) { // Check if data is empty
-    setData(JSON.parse(localStorage.getItem('data'))); // Retrieve data from localStorage
-    if (!data) { // If data is still empty, fetch it
-      fetchData();
-      console.log("Fetching data...");
-    }
-  }
-  
-   
   if (data && chartSvg.current) {
     width = parseInt(windowSize.width);
     height = windowSize.height;
@@ -161,11 +163,14 @@ function BarChart() {
       .style("width", "max-content")
       .style("fill", "var(--font-color2)")
       .style("text-shadow", "2px 2px 10px var(--background-color2)");
-    console.log("SVG chart created successfully");
+      if (chartSvg.current && data.length > 0) {
+        console.log("SVG chart created successfully");
+      };
     
   }
   return () => {
     d3.select(chartSvg.current).selectAll("*").remove(); // Cleanup SVG elements on unmount
+    window.removeEventListener('resize', handleResize); // Cleanup event listener on unmount
     console.log("SVG chart cleaned up");
   };
 }, [data, window.innerWidth, innerHeight]); // Effect runs when data changes
