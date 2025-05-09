@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Logo from "../../assets/react.svg?react";
 import "./navbar.css";
+import "animate.css";
 
 // NavButton component
 const NavButton = ({ id, name, onClick, className = "navbar-btn" }) => (
@@ -95,7 +96,9 @@ const Navbar = ({ navbarItems, setCurrentComponent }) => {
   return (
     <nav className="navbar">
       {navbarItems.map(renderNavItem)}
-      <Logo className="logo" id="React-logo" />
+      <div className="logo-container" id="react-logo-container">
+      <Logo className="logo" id="react-logo" />
+      </div>
     </nav>
   );
 };

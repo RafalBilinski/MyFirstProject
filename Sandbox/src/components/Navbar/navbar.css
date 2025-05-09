@@ -52,15 +52,21 @@
   grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
 }
 
+#react-logo-container {
+  grid-column: 7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 
-.logo {
+}
+#react-logo {
   height: 2rem;
   will-change: filter;
   transition: filter 300ms;
-  grid-column: 7;
-  justify-self: end;
   overflow: hidden;
-  margin: auto;
+  margin-right: 5px;
 }
 
 .dropdown-container {
@@ -121,11 +127,13 @@
   .navbar{
     grid-template-columns: repeat(4, 1fr);
   }
+  #react-logo-container {
+    grid-column: 4;
+  }
   .logo {
     height: 2rem;
     will-change: filter;
     transition: filter 300ms;
-    grid-column: 4;
     justify-self: end;
     overflow: hidden;
     margin: auto;

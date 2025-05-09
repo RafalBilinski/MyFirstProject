@@ -33,15 +33,18 @@ function BarChart() {
 
   if (data.length === 0) { // Check if data is empty
     console.log("Data is empty, checking localStorage...");
+
     if(localStorage.getItem('data') !== null){ // Check if data is in localStorage
-      console.log("Data retrieved from localStorage");
+      console.log("Attempting to retrieve data from localStorage");
       setData(JSON.parse(localStorage.getItem('data'))); // Retrieve data from localStorage
-      console.log("Data length fetched from localStorage:", data.length); // Log the retrived data
+      console.log("Data fetched from localStorage"); 
+
     } else { // If data is still empty, fetch it
       console.log("Fetching data from API...");
       fetchData();      
     }
   }
+
   const yearsToDisplay = data.map((item)=> {
     let quarter;
     let temp = item[0].substring(5, 7);
@@ -168,12 +171,12 @@ function BarChart() {
       };
     
   }
-  return () => {
-    d3.select(chartSvg.current).selectAll("*").remove(); // Cleanup SVG elements on unmount
-    window.removeEventListener('resize', handleResize); // Cleanup event listener on unmount
+  return () => {                                          // Cleanup on unmount
+    d3.select(chartSvg.current).selectAll("*").remove(); 
+    window.removeEventListener('resize', handleResize); 
     console.log("SVG chart cleaned up");
   };
-}, [data, window.innerWidth, innerHeight]); // Effect runs when data changes
+}, [data, window.innerWidth, innerHeight]);               // Effect runs when data or window size is changed 
 
   return (
     <div className="container">

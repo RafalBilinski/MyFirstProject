@@ -9,18 +9,17 @@ import CV from "../../assets/Moje CV - Rafał Biliński.pdf";
 const Resume = () => {
   return (
     <div className="container" id="resume">
-      <div id="white-background" className="resume">
+      <div id="background">
         <aside className="left-side">
           <img
             src={photo}
             alt="zdjęcie Rafał Biliński"
-            width="350"
             className="photo"
             id="rafal-photo"
           />
 
           <section className="contacts">
-            <div className="boxL">
+            <div className="box-left">
               <h2 className="contacts-title">Kontakt</h2>
             </div>
             <ul className="contacts-list">
@@ -61,17 +60,17 @@ const Resume = () => {
             </ul>
           </section>
 
-          <section className="skills">
-            <div className="boxL">
-              <h2 className="skills-title">Języki</h2>
+          <section className="skills" id="languages">
+            <div className="box-left">
+              <h2 className="skills-title" >Języki</h2>
             </div>
             <ul className="skills-list">
               <li className="skills-item">Angielski B2+</li>
             </ul>
           </section>
 
-          <section className="skills">
-            <div className="boxL">
+          <section className="skills" id="tech-skills">
+            <div className="box-left">
               <h2 className="skills-title">Tech Stack</h2>
             </div>
             <ul className="skills-list">
@@ -88,7 +87,7 @@ const Resume = () => {
           </section>
 
           <section className="skills">
-            <div className="boxL">
+            <div className="box-left">
               <h2 className="skills-title">Pozostałe Umiejętności</h2>
             </div>
             <ul className="skills-list">
@@ -124,7 +123,7 @@ const Resume = () => {
 
         <div className="right-side">
           <section className="bio">
-            <div className="boxR">
+            <div className="box-right">
               <h1 className="bio-title">Rafał Biliński</h1>
             </div>
 
@@ -133,48 +132,50 @@ const Resume = () => {
               <b>doświadczenie w tworzeniu aplikacji</b> dla techników
               serwisowych do obsługi zleceń.
               <b>
+                {" "}
                 Korzystam z MS CoPilot i Chat GPT, zachowując krytyczne
                 podejście do uzyskanych wyników.
               </b>
               <br />
               Moją mocną stroną jest
-              <b>umiejętność kreatywnego rozwiązywania problemów</b>i
+              <b> umiejętność kreatywnego rozwiązywania problemów</b>i
               prowadzenie dokumentacji moich działań w zorganizowany sposób.
-              Potrafię <b>zarządzać zespołem</b>i prezentować wyniki jego pracy,
-              rozwiązując konflikty, gdy się pojawiają. Jestem
-              <b>otwarty na nowe wyzwania</b>. Mam doświadczenie w rozmowach z
+              Potrafię <b> zarządzać zespołem</b> i prezentować wyniki jego
+              pracy, rozwiązując konflikty, gdy się pojawiają. Jestem
+              <b> otwarty na nowe wyzwania</b>. Mam doświadczenie w rozmowach z
               klientem korporacyjnym
               <br />
               Moim obecnym celem zawodowym jest zdobycie doświadczenia w
-              dziedzinie <b>analizy danych,</b> <b>uczenia maszynowego</b>i
-              <b>frontendu</b>, aby rozwijać narzędzia związane z AI, które
+              dziedzinie <b>analizy danych, uczenia maszynowego i
+              frontendu</b>, aby rozwijać narzędzia związane z AI, które
               poprawią wskaźnik efektywności energetycznej i optymalizację
               procesów w przemyśle.
             </p>
           </section>
 
           <section className="projects">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="projects-title">Projekty i Certyfikaty</h2>
             </div>
             <ul>
               <li className="projects-item">
                 <span className="accent">
                   <b>
-                    Własny projekt pompy ciepła z pełnym sterowaniem inwerterowym
+                    Własny projekt pompy ciepła z pełnym sterowaniem
+                    inwerterowym
                   </b>
                 </span>
               </li>
               <li className="projects-item">
                 <span className="accent">
-                  <b>Platforma do zarządzania i raportowania zleceń serwisowych </b>
+                  <b>
+                    Platforma do zarządzania i raportowania zleceń serwisowych{" "}
+                  </b>
                 </span>
               </li>
 
-              <li id="certificate-grid">
-                <p>
-                  <span className="accent">JavaScript</span>
-                </p>
+              <li id="certificate-grid">                
+                  <span className="accent cert-name">JavaScript</span>                
                 <a
                   href="https://www.freecodecamp.org/certification/Bilinski_Rafal/javascript-algorithms-and-data-structures-v8"
                   title="Przejdź do https://www.freecodecamp.org aby zobaczyć więcej"
@@ -187,9 +188,7 @@ const Resume = () => {
                     id="js-cert"
                   />
                 </a>
-                <p>
-                  <span className="accent">Frontend</span>
-                </p>
+                  <span className="accent cert-name">Frontend</span>                
                 <a
                   href="https://www.freecodecamp.org/certification/Bilinski_Rafal/front-end-development-libraries"
                   title="Przejdź do https://www.freecodecamp.org aby zobaczyć więcej"
@@ -202,18 +201,14 @@ const Resume = () => {
                     id="Frontend-cert"
                   />
                 </a>
-                <p>
-                  <span className="accent">Azure AZ900</span>
-                </p>
-                <p>
+                  <span className="accent cert-name">Azure AZ900</span>                
                   <span className="accent">W trakcie realizacji</span>
-                </p>
               </li>
             </ul>
           </section>
 
           <section className="jobs">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="education-title">Doświadczenie zawodowe</h2>
             </div>
 
@@ -286,7 +281,7 @@ const Resume = () => {
           </section>
 
           <section className="education">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="education-title">Wykształcenie</h2>
             </div>
 

@@ -9,29 +9,29 @@ import CV from "../../assets/My Resume - Rafał Biliński.pdf";
 const Resume = () => {
   return (
     <div className="container" id="resume">
-      <div id="white-background" className="resume">
+      <div id="background">
         <aside className="left-side">
           <img
             src={photo}
             alt="photo Rafał Biliński"
-            width="350"
+            
             className="photo"
             id="rafal-photo"
           />
 
           <section className="contacts">
-            <div className="boxL">
+            <div className="box-left">
               <h2 className="contacts-title">Contact</h2>
             </div>
             <ul className="contacts-list">
               <li className="contacts-item">
-                Phone: &nbsp;
+                Phone:
                 <a href="tel:+48784492400" className="contacts-link">
                   +48 784 492 400
                 </a>
               </li>
               <li className="contacts-item">
-                E-mail: &nbsp;&nbsp;
+                E-mail: 
                 <a
                   href="mailto:rafal.bilinski92@gmail.com"
                   className="contacts-link"
@@ -49,7 +49,7 @@ const Resume = () => {
                 </a>
               </li>
               <li className="contacts-item">
-                GitHub: &nbsp;
+                GitHub:
                 <a
                   href="https://github.com/RafalBilinski"
                   className="contacts-link"
@@ -60,18 +60,18 @@ const Resume = () => {
             </ul>
           </section>
 
-          <section className="skills">
-            <div className="boxL">
-              <h2 className="skills-title">Languages</h2>
+          <section className="skills" id="languages">
+            <div className="box-left">
+              <h2 className="skills-title" >Languages</h2>
             </div>
             <ul className="skills-list">
               <li className="skills-item">English B2+</li>
             </ul>
           </section>
 
-          <section className="skills">
-            <div className="boxL">
-              <h2 className="skills-title">Technical Skills</h2>
+          <section className="skills" id="tech-skills">
+            <div className="box-left">
+              <h2 className="skills-title" >Technical Skills</h2>
             </div>
             <ul className="skills-list">
               <li className="skills-item">HTML + RWD, CSS/SAAS, JavaScript</li>
@@ -87,7 +87,7 @@ const Resume = () => {
           </section>
 
           <section className="skills">
-            <div className="boxL">
+            <div className="box-left">
               <h2 className="skills-title">Other Skills</h2>
             </div>
             <ul className="skills-list">
@@ -122,7 +122,7 @@ const Resume = () => {
         </aside>
         <div className="right-side">
           <section className="bio">
-            <div className="boxR">
+            <div className="box-right">
               <h1 className="bio-title">Rafal Bilinski</h1>
             </div>
 
@@ -131,6 +131,7 @@ const Resume = () => {
               remember. I have <b> experience in creating an application </b>
               for service technicians for handling commissions.
               <b>
+                {" "}
                 I use MS CoPilot and Chat GPT but I keep a critical approach to
                 obtained results.
               </b>
@@ -139,19 +140,18 @@ const Resume = () => {
               keeping records of my actions in organized way. I can
               <b> manage a team </b> and present the results of its work,
               resolving conflicts whenever they appear. I am
-              <b> open to new challenges</b>. I can negotiate with corporate
+              <b> open to new challenges.</b> I can negotiate with corporate
               clients with ease.
               <br />
               My current carrier goal is to gain experience in the field of
-              <b> data analysis, </b> <b> machine learning </b>
-              and <b>frontend</b> to develop AI-related tools which will improve
-              the energy efficiency index and processes optimisation in the
-              industry.
+              <b> data analysis, machine learning and frontend</b> to develop
+              AI-related tools which will improve the energy efficiency index
+              and processes optimisation in the industry.
             </p>
           </section>
 
           <section className="projects">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="projects-title">Projects and Certificates</h2>
             </div>
             <ul>
@@ -169,9 +169,9 @@ const Resume = () => {
               </li>
 
               <li id="certificate-grid">
-                <p>
-                  <span className="accent">JavaScript</span>
-                </p>
+                
+                  <span className="accent cert-name">JavaScript</span>
+                
                 <a
                   href="https://www.freecodecamp.org/certification/Bilinski_Rafal/javascript-algorithms-and-data-structures-v8"
                   title="Go to https://www.freecodecamp.org and see more"
@@ -183,10 +183,8 @@ const Resume = () => {
                     className="photo"
                     id="js-cert"
                   />
-                </a>
-                <p>
-                  <span className="accent">Frontend</span>
-                </p>
+                </a>                
+                  <span className="accent cert-name">Frontend</span>                
                 <a
                   href="https://www.freecodecamp.org/certification/Bilinski_Rafal/front-end-development-libraries"
                   title="Go to https://www.freecodecamp.org and see more"
@@ -198,19 +196,15 @@ const Resume = () => {
                     className="photo"
                     id="Frontend-cert"
                   />
-                </a>
-                <p>
-                  <span className="accent">Azure AZ900</span>
-                </p>
-                <p>
-                  <span className="accent">In progress</span>
-                </p>
+                </a>                
+                  <span className="accent cert-name">Azure AZ900</span>             
+                  <span className="accent">In progress</span>                
               </li>
             </ul>
           </section>
 
           <section className="jobs">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="education-title">Work Experience</h2>
             </div>
 
@@ -299,7 +293,7 @@ const Resume = () => {
           </section>
 
           <section className="education">
-            <div className="boxR">
+            <div className="box-right">
               <h2 className="education-title">Education</h2>
             </div>
 

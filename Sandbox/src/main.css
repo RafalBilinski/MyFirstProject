@@ -20,9 +20,9 @@ body {
 }
 
 .container {
-  margin: 5px;
+  margin: min(5px, 1vw);
   background: grey;
-  padding: 20px;
+  padding: min(20px, 2vw);
   border-radius: 20px;
   background: linear-gradient(
     -135deg,
@@ -31,7 +31,7 @@ body {
     var(--background-color3)
   );
   color: var(--font-color1);
-  width: max-content; 
+  width: fit-content; 
   height: max-content;
   
 }
@@ -58,4 +58,5 @@ body {
   }
   .content{
     margin: 10px 0px ;
+  }
 }
