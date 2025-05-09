@@ -6,6 +6,8 @@
 #calculator {
   font-family: "Digital-7 Mono", sans-serif;
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 #btn-Grid button,
