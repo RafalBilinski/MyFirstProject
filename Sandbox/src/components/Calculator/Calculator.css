@@ -1,8 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/digital-7-mono");
 
-.container:has(#calculator) {
-  height: 415px;
-}
+
 #calculator {
   font-family: "Digital-7 Mono", sans-serif;
   text-align: right;
@@ -28,6 +26,7 @@
   background-color: var(--background-color2);
   color: black;
   border-radius: 4px 4px 0 0;
+  height: 25px;
 }
 
 #calc-display {
@@ -35,6 +34,7 @@
   text-shadow: 0 0 2px black;
   padding: 2px;
   background-color: var(--background-color2);
+  height: 45px;
 }
 
 .calcButtonContainer {
