@@ -79,7 +79,6 @@ class Buttons extends React.Component {
       text: "Use Pads with mouse or keyboard",
     };
 
-    // Binding metod (opcjonalne w nowszych wersjach ES)
     this.handleClick = this.handleClick.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
@@ -103,7 +102,8 @@ class Buttons extends React.Component {
   handleKeyPress(event) {
     const keyString = String(event.key).toUpperCase();
     const audioElement = document.getElementById(keyString);
-    audioElement.play();
+    const audioElementClone = audioElement.cloneNode(true);  // Klonowanie elementu audio
+    audioElementClone.play();
     this.setState({
       text: audioElement.parentElement.id,
     });

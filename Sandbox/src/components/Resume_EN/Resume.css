@@ -73,10 +73,9 @@ section {
   font-family: "Cinzel", serif;
   font-size: var(--font-size-45px);
   line-height: 1.714;
-  margin-bottom: var(--padding-20px);
-  margin-top: var(--padding-20px);
   text-align: center;
   width: 100%;
+  padding: 0;
 }
 
 .jobs-title,
@@ -159,6 +158,7 @@ ol.horizontal_menu li {
   font-weight: 700;
   line-height: 22px;
   text-align: center;
+  margin: 0;
 }
 
 .contacts-list,
